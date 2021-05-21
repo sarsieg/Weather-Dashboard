@@ -1,5 +1,7 @@
 .navbar-brand {
     font-size: 40px;
+    color: white;
+    
 }
 
 .search-header {
@@ -14,3 +16,4 @@
 .forecast-date {
     font-size: 25px;
 }
+

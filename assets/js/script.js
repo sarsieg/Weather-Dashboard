@@ -90,4 +90,9 @@ function initPage() {
         localStorage.setItem("search",JSON.stringify(searchHistory));
         renderSearchHistory();
     })
+
+    clearEl.addEventListener("click",function() {
+        searchHistory = [];
+        renderSearchHistory();
+    })
 }

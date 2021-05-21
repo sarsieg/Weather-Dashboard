@@ -24,11 +24,11 @@ function initPage() {
             const currentDate = new Date(response.data.dt*1000);
             console.log(currentDate);
             const day = currentDate.getDate();
-            const month = currentMonth.getMonth();
-            const year = currentYear.getYear();
+            const month = currentDate.getMonth() + 1;
+            const year = currentDate.getFullYear();
             nameEl.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
             let weatherPic = response.data.weather[0].icon;
-            currentPicEl.setAttribute("src", "https://openweathermap.org/img/wn/" + weatherPic + " @2x.png");
+            currentPicEl.setAttribute("src","https://openweathermap.org/img/wn/" + weatherPic + "@2x.png");
             currentPicEl.setAttribute("alt",response.data.weather[0].description);
             currentTempEl.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
             currentHumidityEl.innerHTML = "Humidity: " + response.data.main.humidity + "%";
@@ -63,7 +63,7 @@ function initPage() {
                     const forecastDateEl = document.createElement("p");
                     forecastDateEl.setAttribute("class", "mt-3 mb-0 forecast-date");
                     forecastDateEl.innerHTML = forecastMonth + "/" + forecastDay + "/" + forecastYear;
-                    forecastEls.append(forecastDateEl);
+                    forecastEls[i].append(forecastDateEl);
 
                     const forecastWeatherEl = document.createElement("img");
                     forecastWeatherEl.setAttribute("src", "https://openweathermap.org/img/wn/" + response.data.list[forecastIndex].weather[0].icon + "@2x.png");
@@ -72,11 +72,11 @@ function initPage() {
 
                     const forecastTempEl = document.createElement("p");
                     forecastTempEl.innerHTML = "Temp: " + k2f(response.data.list[forecastIndex].main.temp) + " &#176F";
-                    forecastWeatherEl[i].append(forecastTempEl);
+                    forecastEls[i].append(forecastTempEl);
 
                     const forecastHumidityEl = document.createElement("p");
                     forecastHumidityEl.innerHTML = "Humidity: " + response.data.list[forecastIndex].main.humidity + "%";
-                    forecastEls.append(forecastHumidityEl);
+                    forecastEls[i].append(forecastHumidityEl);
 
                 }
             })

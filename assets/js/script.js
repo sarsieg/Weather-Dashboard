@@ -70,6 +70,9 @@ function initPage() {
                     forecastWeatherEl.setAttribute("alt",response.data.list[forecastIndex].main.temp) + " &#176F";
                     forecastEls[i].append(forecastWeatherEl);
 
+                    const forecastTempEl = document.createElement("p");
+                    forecastTempEl.innerHTML = "Temp: " + k2f(response.data.list[forecastIndex].main.temp) + " &#176F";
+                    forecastWeatherEl[i].append(forecastTempEl);
                     
 
                 }

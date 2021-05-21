@@ -73,12 +73,15 @@ function initPage() {
                     const forecastTempEl = document.createElement("p");
                     forecastTempEl.innerHTML = "Temp: " + k2f(response.data.list[forecastIndex].main.temp) + " &#176F";
                     forecastWeatherEl[i].append(forecastTempEl);
-                    
+
+                    const forecastHumidityEl = document.createElement("p");
+                    forecastHumidityEl.innerHTML = "Humidity: " + response.data.list[forecastIndex].main.humidity + "%";
+                    forecastEls.append(forecastHumidityEl);
 
                 }
             })
-
-
-        })
+        });
     }
+
+    
 }

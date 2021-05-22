@@ -1,7 +1,11 @@
 .navbar-brand {
     font-size: 36px;
     color: white;
-
+    background-color: rgb(211, 13, 96);
+    
+}
+.bg-dark {
+    background-color: rgb(211, 13, 96)!important;
 }
 
 .search-header {
@@ -21,3 +25,12 @@ body {
     padding: 50px;
 }
 
+#search-button {
+    background-color: rgb(233, 130, 173);
+    border-color: rgb(233, 130, 173);
+}
+
+#clear-history {
+    background-color: rgb(124, 75, 96);
+    border-color: rgb(124, 75, 96);
+}

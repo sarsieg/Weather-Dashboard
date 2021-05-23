@@ -12,9 +12,11 @@
 </head>
 
 <body>
+    <!-- Header -->
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 w-100 text-center">Weather Dashboard</span>
     </nav>
+    <!-- Search header and bar -->
     <div class="row">
         <div class="col-4 bg-light">
             <p class="search-header my-1">Search for a City</p>
@@ -27,10 +29,11 @@
                     </button>
                 </div>
             </div>
-            
+   <!-- Search history -->
             <form id="history"></form>
             <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear History</button>
         </div>
+     <!-- Current weather data and conditions -->
         <div class="col-8">
             <div class="row mr-0">
                 <div class="col-12 border border-dark m-3 rounded">
@@ -40,21 +43,25 @@
                             <img id="current-pic" src="placeholder" alt="">
                         </div>
                     </div>
+                    <!-- Current temperature -->
                     <div class="row">
                         <div class="col-12">
                             <p id="temperature"></p>
                         </div>
                     </div>
+                    <!-- Current humidity -->
                     <div class="row">
                         <div class="col-12">
                             <p id="humidity"></p>
                         </div>
                     </div>
+                    <!-- Current wind speed -->
                     <div class="row">
                         <div class="col-12">
                             <p id="wind-speed"></p>
                         </div>
                     </div>
+                    <!-- Current UV index -->
                     <div class="row">
                         <div class="col-12">
                             <p id="UV-index"></p>
@@ -62,6 +69,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Five day forecast with each day in seperated div class -->
             <div class="row">
                 <div class="col-12">
                     <h3>5-Day Forecast</h3>

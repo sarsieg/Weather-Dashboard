@@ -30,15 +30,27 @@ body {
 #search-button {
     background-color:  rgb(136, 136, 252);
     border-color:  rgb(136, 136, 252);
+    padding: 
 }
 
 #clear-history {
     background-color: rgb(136, 136, 252);
     border-color: rgb(136, 136, 252);
-    
+    width: 100%;
+    margin-top: 15px;
 }
 
 .bg-primary {
     background-color: rgb(183, 183, 250)!important;
 }
 
+.form-control[readonly] {
+    margin-top: 15px;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
